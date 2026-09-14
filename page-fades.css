@@ -1,0 +1,7 @@
+@keyframes page-soft-in{from{opacity:0}to{opacity:1}}
+body{animation:page-soft-in .55s ease-in-out!important}
+.about-panel{transform:none!important;transition:opacity .4s ease-in-out!important}
+dialog[open]{animation:none!important}
+.menu-wipe,.return-home-preview,.return-menu-sheet{display:none!important}
+.menu-arrival .categories,.menu-arrival .project-header,.menu-arrival .masthead{animation:none!important}
+@media(prefers-reduced-motion:reduce){body{animation:none!important}.about-panel{transition:none!important}}

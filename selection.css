@@ -1,0 +1,18 @@
+/* A single editorial wordmark assembled from contrasting print fragments. */
+.selection-collage{display:inline-block!important;position:relative;isolation:isolate;white-space:nowrap;padding-left:.1em!important}
+.selection-collage>.selection-balloon{display:inline-flex;align-items:baseline;gap:0;font:inherit!important;transform:none;transform-origin:45% 100%;animation:selection-balloon 7.8s ease-in-out infinite;will-change:transform}
+.cut-letter{position:relative;display:inline-block;font-style:normal;line-height:.95;color:var(--muted);transform:translateY(var(--lift,0)) rotate(var(--angle,0deg));margin-left:-.025em}
+.cut-1{font:italic 1.3em/.8 'Cardinal Fruit',Georgia,serif;--angle:-12deg;letter-spacing:-.12em;z-index:2}
+.cut-2{font:800 .78em/.95 Arial,sans-serif;background:var(--muted);color:var(--paper);padding:.04em .09em .07em;--angle:8deg;--lift:-.09em;clip-path:polygon(3% 0,100% 4%,96% 100%,0 94%)}
+.cut-3{font:italic 1.32em/.8 'Cardinal Fruit',serif;--angle:-9deg;--lift:-.04em;margin-left:.025em}
+.cut-4{font:400 .98em/.9 'Neue Haas Unica',Arial,sans-serif;--angle:5deg;--lift:.06em;letter-spacing:-.09em}
+.cut-5{font:italic 1.16em/.85 Georgia,serif;--angle:-9deg;--lift:-.035em;margin-left:.02em}
+.cut-6{font:800 .82em/.95 Arial,sans-serif;background:color-mix(in srgb,var(--muted) 14%,var(--paper));padding:.02em .1em .08em;--angle:10deg;--lift:.025em;clip-path:polygon(0 6%,96% 0,100% 95%,5% 100%)}
+.cut-7{font:italic 1.08em/.9 'Cardinal Fruit',serif;--angle:-8deg;--lift:-.14em;margin-left:.025em}
+.cut-8{font:500 .87em/.9 'Neue Haas Unica',Arial,sans-serif;--angle:7deg;--lift:.02em;letter-spacing:-.055em}
+.cut-9{font:italic 1.05em/.9 Georgia,serif;--angle:-6deg;--lift:-.055em;margin-left:.035em}
+@keyframes selection-balloon{0%,100%{transform:translate3d(0,2px,0) rotate(-3deg)}32%{transform:translate3d(6px,-12px,0) rotate(2deg)}66%{transform:translate3d(-3px,-6px,0) rotate(-1deg)}}
+@media(prefers-reduced-motion:reduce){.selection-collage>.selection-balloon{animation:none;will-change:auto}}
+.selection-collage>.selection-balloon{animation:none;transform:none;will-change:auto}
+.selection-balloon .cut-letter{will-change:transform;transition:none}
+@media(prefers-reduced-motion:reduce){.selection-balloon .cut-letter{will-change:auto}}

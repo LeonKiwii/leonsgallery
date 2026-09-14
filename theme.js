@@ -1,0 +1,1 @@
+(()=>{let mode='light';try{mode=localStorage.getItem('leon-theme')||'light';}catch{}document.documentElement.dataset.theme=mode;window.toggleTheme=()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{localStorage.setItem('leon-theme',next);}catch{}window.dispatchEvent(new Event('themechange'));};})();
