@@ -1,0 +1,42 @@
+
+.palace-page{margin:0;background:#c7c5bc;color:#242621;height:100svh;min-height:0;overflow:hidden}
+.palace-stage{position:absolute;inset:0;background:#c7c5bc;overflow:hidden}
+.palace-action{position:absolute;inset:0;display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:pointer;color:inherit}
+.palace-action:focus-visible{outline:1px solid currentColor;outline-offset:-8px}
+#palace-scene{display:block;width:100%;height:100%;object-fit:contain}
+.palace-page .masthead{background:transparent!important;color:#252722;z-index:30}
+.palace-page .masthead a,.palace-page .masthead button{color:inherit}
+.palace-page.about-open .masthead{color:var(--ink);z-index:40}
+.palace-caption{position:absolute;left:32px;bottom:65px;display:flex;flex-direction:column;gap:8px;pointer-events:none;font:14px Baskerville,serif;letter-spacing:.06em}
+#palace-hint{font:10px 'Neue Haas Unica',Arial,sans-serif;letter-spacing:.03em;opacity:.65}
+.palace-back{position:absolute;right:32px;bottom:65px;color:inherit;text-decoration:none;font:12px 'Neue Haas Unica',Arial,sans-serif}
+.palace-page>.copyright{position:fixed;bottom:0;left:0;width:100%;margin:0;padding:20px;background:transparent!important;color:#252722;pointer-events:none;font-size:10px}
+@media(max-width:700px){.palace-caption{left:18px}.palace-back{right:18px}}
+
+/* Photograph and structural study are separate complete scenes: no image fragments. */
+.palace-photograph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.1s ease}
+#palace-scene{position:absolute;inset:0;opacity:0;transition:opacity 1.1s ease}
+.palace-page.is-studying .palace-photograph{opacity:0}
+.palace-page.is-studying #palace-scene{opacity:1}
+.palace-stage,.palace-page{background:#e7e3d9}
+.palace-caption,.palace-back,.palace-page>.copyright{color:#f4eee2;transition:color 1s}
+.palace-page.is-studying .palace-caption,.palace-page.is-studying .palace-back,.palace-page.is-studying>.copyright{color:#35382f}
+
+/* A slower match dissolve settles before any timber moves. */
+.palace-photograph{transform:scale(1);filter:blur(0);transform-origin:39% 60%;transition:opacity 2.6s cubic-bezier(.4,0,.2,1),transform 3s cubic-bezier(.22,.61,.36,1),filter 2.6s ease}
+#palace-scene{transform:scale(.985);transform-origin:50% 65%;transition:opacity 2.6s cubic-bezier(.4,0,.2,1),transform 3s cubic-bezier(.22,.61,.36,1)}
+.palace-page.is-studying .palace-photograph{transform:scale(1.035);filter:blur(1.5px)}
+.palace-page.is-studying #palace-scene{transform:scale(1)}
+.palace-caption,.palace-back,.palace-page>.copyright{color:#f6f2e9;text-shadow:0 1px 6px #0008}
+.palace-page.is-studying .palace-caption,.palace-page.is-studying .palace-back,.palace-page.is-studying>.copyright{text-shadow:none}
+@media(prefers-reduced-motion:reduce){.palace-photograph,#palace-scene{transition:opacity .35s!important;transform:none!important;filter:none!important}}
+
+.palace-sound{position:fixed;left:32px;bottom:112px;z-index:20;display:flex;align-items:center;gap:18px;color:#f6f2e9;text-shadow:0 1px 6px #0008;transition:color 2s}
+.palace-sound button{border:0;background:none;color:inherit;padding:6px 0;cursor:pointer;font:10px 'Neue Haas Unica',Arial,sans-serif}
+.palace-sound #palace-track{font:italic 17px Baskerville,serif}
+.is-studying .palace-sound{color:#35382f;text-shadow:none}.about-open .palace-sound{visibility:hidden}
+#palace-listening{position:fixed;inset:0;width:100vw;height:100svh;max-width:none;max-height:none;margin:0;padding:32px;border:0;background:var(--paper);color:var(--ink);z-index:100;box-sizing:border-box}
+#palace-listening::backdrop{background:#0008}#palace-listening button{border:0;background:none;color:inherit;cursor:pointer;font:13px 'Neue Haas Unica',Arial,sans-serif}
+#palace-listening-close{float:right}.palace-listening-content{min-height:85svh;max-width:600px;margin:auto;display:flex;flex-direction:column;justify-content:center;gap:24px;text-align:center}
+.palace-listening-content h2{font:normal clamp(45px,8vw,100px)/1.1 'Cardinal Fruit',serif;margin:15px 0}.palace-listening-content p,.palace-listening-content label,#palace-time{font:11px 'Neue Haas Unica',Arial,sans-serif;letter-spacing:.04em}.palace-listening-content input{accent-color:var(--ink);width:100%}.palace-listening-content label{display:flex;gap:20px;align-items:center;margin-top:20px}
+@media(max-width:700px){.palace-sound{left:18px}}

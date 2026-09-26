@@ -1,0 +1,11 @@
+
+.art-still-page{margin:0;background:var(--paper);color:var(--ink)}
+.art-still{position:relative;width:100%;height:100svh;background:#000;overflow:hidden}
+.art-still>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.art-still-page .masthead{background:transparent!important;color:#fff;z-index:30}
+.art-still-page .masthead a,.art-still-page .masthead button{color:inherit}
+.art-still-page.about-open .masthead{background:var(--paper)!important;color:var(--ink);z-index:40}
+.art-still-back{position:absolute;right:32px;bottom:28px;color:white;text-decoration:none;font:12px 'Neue Haas Unica',Arial,sans-serif;transition:opacity .4s;text-shadow:0 1px 6px #0005}
+.art-still-back:hover{opacity:.6}
+.art-still-page>.copyright{margin-top:0}
+@media(max-width:600px){.art-still-back{right:20px}}
