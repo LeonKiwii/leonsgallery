@@ -65,3 +65,35 @@
 .flower-player-title{max-width:90%;margin:0;color:#f0ece3;font:normal clamp(22px,3.5vw,42px)/1.12 Baskerville,Georgia,serif}
 .flower-player-credit{margin:14px 0 24px;color:#a9a59c;font:11px/1.5 Arial,sans-serif;letter-spacing:.08em}
 .flower-player-toggle{border:1px solid #8b887f;background:transparent;color:#e4e0d8;padding:10px 24px;font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+
+/* Size the composition to its stage, with room for the navigation and credits. */
+.softly-stage{container-type:size}
+.flower-ring{width:min(88vw,82svh,900px);width:min(88cqw,94cqh,900px)}
+.flower-garden .song-flower:first-child{top:11%!important}
+.song-flower:hover,.song-flower:focus-visible{z-index:4}
+.song-flower:focus-visible{outline:1px solid #aaa79f;outline-offset:8px;border-radius:50%}
+.flower-name{display:none!important}
+.flower-tooltip{position:fixed;z-index:40;max-width:min(220px,42vw);padding:8px 10px;background:#101112ed;color:#e4e0d8;font:11px/1.6 'Neue Haas Unica',Arial,sans-serif;letter-spacing:.07em;text-transform:uppercase;pointer-events:none;text-wrap:balance}
+.flower-tooltip[hidden]{display:none}
+.garden-label{width:min(30cqw,32cqh,310px)}
+.garden-cover{width:min(20cqw,24cqh,210px)}
+.garden-label h2{font-size:clamp(16px,2.8cqh,29px);line-height:1.12}
+.garden-label .song-name{font-size:10px;line-height:1.5}
+.cover-caption{font-size:clamp(10px,1.1vw,12px);line-height:1.6;text-transform:none;letter-spacing:.02em;text-wrap:balance}
+.flower-player{width:min(94vw,980px);height:min(90svh,760px);overflow:auto;border:1px solid #ffffff18;box-shadow:none}
+.flower-player-body{height:auto;min-height:calc(100% - 58px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);column-gap:48px;align-content:center;text-align:left;padding:36px 48px 48px}
+.flower-player-cover{grid-column:1;grid-row:1 / 6;width:100%;max-height:62svh;object-fit:contain;box-shadow:none;filter:none}
+.flower-player-kicker,.flower-player-title,.flower-player-credit,.flower-transport{grid-column:2}
+.flower-player-kicker{margin:0 0 22px;font-size:9px;line-height:1.6}
+.flower-player-title{max-width:none;font-size:clamp(25px,3vw,42px);text-wrap:balance}
+.flower-player-credit{margin:20px 0 38px}
+.flower-transport{width:100%;align-self:start}
+.flower-time,.flower-controls{display:flex;justify-content:space-between;align-items:center;gap:20px;font:10px/1.5 Arial,sans-serif;color:#aaa79f}
+.flower-seek{display:block;width:100%;margin:8px 0 22px;accent-color:#d6d0c6;height:16px}
+.flower-controls label{display:flex;align-items:center;gap:8px}
+.flower-volume{width:64px;accent-color:#d6d0c6}
+.flower-player-toggle{min-width:85px}
+.player-status{min-height:2em;font:11px/1.5 Arial,sans-serif;color:#aaa79f}
+.flower-player button:focus-visible,.flower-player input:focus-visible{outline:1px solid #eee;outline-offset:5px}
+@media(max-width:650px){.flower-player-body{display:flex;padding:12px 24px 28px;gap:0;text-align:center}.flower-player-cover{width:min(65vw,32svh)}.flower-player-kicker{margin:24px 0 12px}.flower-player-credit{margin:12px 0 24px}.flower-transport{max-width:340px;align-self:center}.garden-label{width:36cqw}.garden-label h2{font-size:17px}.garden-cover{width:25cqw}.flower-ring{width:min(94cqw,88cqh)}.flower-tooltip{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.song-flower,.flower-photo{animation:none!important;transition:none!important}}

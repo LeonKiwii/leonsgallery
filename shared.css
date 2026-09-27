@@ -56,3 +56,7 @@ html{overscroll-behavior-y:none}body{position:relative;overscroll-behavior-y:non
 /* Copyright follows actual page content, rather than inserting another viewport. */
 body:not(.home-page)>.copyright{margin-top:0;margin-bottom:0;padding:20px 24px;min-height:55px;box-sizing:border-box}
 .literature-page .library{padding-bottom:35px}.literature-page .bookshelf{padding-bottom:20px}
+/* A quiet, consistent keyboard affordance across the portfolio. */
+a:focus-visible,button:focus-visible{outline:1px solid currentColor;outline-offset:5px}
+.about-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.about-gallery img{transition:none!important}}

@@ -5,6 +5,6 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a|
 const show=HTMLDialogElement.prototype.showModal,close=HTMLDialogElement.prototype.close;
 HTMLDialogElement.prototype.showModal=function(){this._fadeClosing=false;show.call(this);if(!reduced)this.animate([{opacity:0},{opacity:1}],{duration:450,easing:'ease-in-out'})};
 HTMLDialogElement.prototype.close=function(value){if(this._fadeClosing||!this.open)return;this._fadeClosing=true;const done=()=>{close.call(this,value);this._fadeClosing=false};if(reduced){done();return}this.animate([{opacity:1},{opacity:0}],{duration:350,easing:'ease-in-out'}).finished.then(done)};
-document.addEventListener('cancel',e=>{if(e.target instanceof HTMLDialogElement&&!e.defaultPrevented){e.preventDefault();e.target.close()}},false);
+document.addEventListener('cancel',e=>{if(e.target instanceof HTMLDialogElement&&!e.defaultPrevented){e.preventDefault();e.target.close()}},true);
 addEventListener('pageshow',e=>{leaving=false;if(e.persisted)document.body.getAnimations().forEach(a=>a.cancel())});
 })();
