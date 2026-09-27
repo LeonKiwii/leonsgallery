@@ -1,6 +1,6 @@
 (()=>{
 const frame=document.querySelector('#site'),audio=document.querySelector('audio'),button=document.querySelector('#enable-sound'),controls=document.querySelector('#journey-controls'),room=document.querySelector('#listening-mode'),toggle=document.querySelector('#listening-play'),seek=document.querySelector('#listening-seek'),volume=document.querySelector('#listening-volume');let eligible=false,current='',pausedByUser=false;
-const main=['index.html','abyss.html','genesis.html','menu.html'];const start=new URL(new URLSearchParams(location.search).get('page')||'index.html',location.href);if(start.origin!==location.origin)return;frame.src=start.href;audio.volume=.38;
+const main=['index.html','abyss.html','genesis.html','menu.html'];const start=new URL(new URLSearchParams(location.search).get('page')||'index.html',location.href);if(start.origin!==location.origin)return;audio.volume=.38;
 function applyPage(page){
  eligible=page==='menu.html'?eligible:main.includes(page);
  controls.hidden=!eligible;controls.style.display=eligible?'flex':'none';
@@ -16,5 +16,5 @@ function theme(){try{const child=frame.contentDocument;const css=getComputedStyl
 frame.addEventListener('load',()=>{try{applyPage(frame.contentWindow.location.pathname.split('/').pop()||'index.html')}catch{}theme();try{new MutationObserver(theme).observe(frame.contentDocument.documentElement,{attributes:true})}catch{}});
 addEventListener('message',e=>{if(e.origin!==location.origin||e.source!==frame.contentWindow)return;
 if(e.data?.type==='leon-page'){const url=new URL(e.data.url);if(url.origin!==location.origin)return;applyPage(e.data.page);if(url.href!==current){history.replaceState({page:url.href},'',url.href);current=url.href}try{document.title=frame.contentDocument.title}catch{}}
-if(e.data?.type==='leon-audio-unlock')play();});controls.hidden=true;controls.style.display='none';state();
+if(e.data?.type==='leon-audio-unlock')play();});applyPage(start.pathname.split('/').pop()||'index.html');frame.src=start.href;state();
 })();
