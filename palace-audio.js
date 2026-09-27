@@ -7,6 +7,6 @@ mute.onclick=()=>{if(audio.paused){paused=false;audio.muted=false;start();}else 
 document.querySelector('#palace-track').onclick=()=>{room.showModal();paused=false;start();};document.querySelector('#palace-listening-close').onclick=()=>room.close();
 play.onclick=()=>{if(audio.paused){paused=false;start();}else{paused=true;audio.pause();}};
 seek.oninput=()=>{if(Number.isFinite(audio.duration))audio.currentTime=+seek.value;};document.querySelector('#palace-volume').oninput=e=>{audio.volume=+e.target.value;};
-['play','pause','volumechange'].forEach(e=>audio.addEventListener(e,sync));audio.addEventListener('timeupdate',()=>{seek.max=audio.duration||112;seek.value=audio.currentTime;document.querySelector('#palace-time').textContent=time(audio.currentTime)+' / '+time(audio.duration||112);});
+['play','pause','volumechange'].forEach(e=>audio.addEventListener(e,sync));audio.addEventListener('timeupdate',()=>{seek.max=audio.duration||196.65;seek.value=audio.currentTime;document.querySelector('#palace-time').textContent=time(audio.currentTime)+' / '+time(audio.duration||196.65);});
 document.querySelector('.palace-action').addEventListener('click',start);window.addEventListener('pagehide',()=>audio.pause());start();
 })();
