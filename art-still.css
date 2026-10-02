@@ -12,3 +12,6 @@
 /* The artwork continues behind both pieces of navigation. */
 .art-still-page>.copyright{position:fixed;inset:auto 0 0;z-index:20;padding:18px;background:transparent!important;color:#fff;pointer-events:none;text-shadow:0 1px 8px #0009}
 .art-still-back{bottom:66px}
+/* White lettering inverts over the light areas of the photograph. */
+.art-still-page .masthead{mix-blend-mode:difference}
+.art-still-page.about-open .masthead{mix-blend-mode:normal}

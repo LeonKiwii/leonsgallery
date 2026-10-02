@@ -1,0 +1,12 @@
+/* Shared craft tokens; the artworks retain their own palettes. */
+:root{
+  --font-gallery:Baskerville,'Times New Roman',serif;
+  --font-display:'Cardinal Fruit',Baskerville,serif;
+  --font-interface:'Neue Haas Unica',Arial,sans-serif;
+  --space-gutter:clamp(20px,4vw,64px);
+  --space-section:clamp(48px,7vw,104px);
+  --rule-subtle:color-mix(in srgb,var(--ink) 20%,transparent);
+  --ease-gallery:cubic-bezier(.22,.68,0,1);
+  --duration-detail:220ms;
+  --duration-reveal:650ms;
+}

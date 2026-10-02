@@ -22,3 +22,11 @@ html{scrollbar-gutter:stable;overflow-x:hidden}body{padding-top:var(--expanded-h
 .category-selection.music-selection>.music-index,.category-selection.music-selection>.category-word{grid-column:1;justify-self:start;align-self:start;margin:0;padding:0;transform:none;text-indent:0}
 .category-selection.music-selection>.music-index{grid-row:1;line-height:1}
 .category-selection.music-selection>.category-word{grid-row:2}
+/* Give every discipline a place within the initial composition. */
+.menu-page .categories{height:calc(100svh - var(--expanded-header,300px));min-height:420px;justify-content:space-between;padding:28px 5vw;gap:16px}
+.menu-page .category{font-size:clamp(28px,min(7.2vw,10vh),110px);line-height:1.12}
+.menu-page .art-project{font-size:clamp(26px,min(6.8vw,9.6vh),105px)}
+.category:focus-within .category-selection{color:var(--paper)}
+.category:focus-within .category-selection ::before{opacity:1}
+.category a{width:max-content;max-width:100%}
+@media(max-width:700px){.menu-page .categories{min-height:380px;padding:30px 5vw}.menu-page .category{font-size:min(11vw,9.8vh)}.menu-page .art-project{font-size:min(10vw,9.2vh)}}

@@ -1,23 +1,48 @@
-.art-directory{flex:1;padding:20px 6vw 60px}.art-directory>h2{font:normal clamp(42px,7vw,100px)/1 'Cardinal Fruit',serif;margin:0 0 50px}.art-project-card{display:block;max-width:470px;margin:0 auto;color:inherit;text-decoration:none}.art-directory-cover{max-width:280px;margin:auto;perspective:1200px}.art-directory-cover img{width:100%;display:block;transform:rotateY(-12deg) rotateZ(-2deg);box-shadow:8px 14px 25px #0002;transition:transform .8s cubic-bezier(.2,.75,.2,1)}.art-project-card:hover img{transform:rotateY(0) rotateZ(0) translateY(-8px)}.art-directory-caption{display:flex;justify-content:space-between;align-items:baseline;gap:22px;margin-top:30px;font:11px 'Neue Haas Unica',Arial,sans-serif}.art-directory-caption h3{font:normal 27px 'Songti SC',serif;margin:0 0 8px}.art-directory-caption p{font:italic 19px Baskerville,serif;margin:0;color:var(--muted)}@media(prefers-reduced-motion:reduce){.art-directory-cover img{transition:none}}
-.art-project-pending{margin-top:70px;padding:24px 0;border-top:1px solid color-mix(in srgb,var(--ink) 22%,transparent)}.art-project-pending .art-directory-caption{margin-top:0}.art-project-pending:hover{opacity:.65;transition:opacity .4s}
-
-.palace-card{margin-top:70px}.palace-card .art-directory-cover{max-width:420px}
-
-/* Typography-only project index. Each work has its own typographic voice. */
-.type-directory{padding:20px 6vw 36px;width:100%;max-width:1600px;margin:auto}.type-directory>h2{font-size:clamp(38px,5vw,76px);margin-bottom:42px}.type-project{display:grid;grid-template-columns:100px minmax(0,1fr) 36px;gap:24px;align-items:start;color:var(--ink);text-decoration:none;padding:52px 0 58px;border-top:1px solid color-mix(in srgb,var(--ink) 20%,transparent)}.type-number{font:11px/1.5 'Neue Haas Unica',Arial,sans-serif;color:var(--muted);padding-top:9px}.type-work{min-width:0;transition:transform .8s cubic-bezier(.2,.7,.2,1)}.type-work h3{font-weight:400;margin:0}.type-work p{font:12px/1.6 'Neue Haas Unica',Arial,sans-serif;color:var(--muted);margin:20px 0 0}.type-arrow{font:25px/1 serif;opacity:.35;transition:opacity .5s,transform .7s}.type-project:hover .type-arrow,.type-project:focus-visible .type-arrow{opacity:1;transform:translate(4px,-4px)}.type-project:focus-visible{outline:1px solid var(--ink);outline-offset:8px}.type-softly h3{font:normal clamp(34px,5.7vw,84px)/1.06 'Cardinal Fruit',Baskerville,serif;letter-spacing:-.025em}.type-softly h3 span{display:block}.type-softly h3 em{display:block;margin-left:12%;font-family:Baskerville,serif;font-weight:400}.type-softly p{margin-left:12%;font:italic clamp(13px,1.5vw,20px)/1.5 Baskerville,serif}.type-softly:hover .type-work{transform:translateX(8px)}.type-paradisus .type-work{padding-left:19%}.type-paradisus h3{display:flex;gap:.35em;font:normal clamp(50px,7.5vw,105px)/1.15 'Songti SC','Noto Serif CJK SC',serif}.type-paradisus h3 span:nth-child(2){transform:translateY(.12em)}.type-paradisus p{font:16px/1.5 Baskerville,serif;letter-spacing:.16em;margin-top:30px}.type-paradisus p em{font-weight:400}.type-paradisus h3 span{transition:transform .8s}.type-paradisus:hover h3 span:nth-child(2){transform:translateY(-.04em)}.type-untitled h3{font:300 clamp(38px,6.6vw,94px)/1.15 'Neue Haas Unica',Arial,sans-serif;letter-spacing:-.06em}.type-untitled h3 span{font:normal .7em monospace;color:var(--muted);display:inline-block;transition:transform .8s}.type-untitled:hover h3 span:first-child{transform:translateX(-10px)}.type-untitled:hover h3 span:last-child{transform:translateX(10px)}.type-untitled p{font-family:monospace;letter-spacing:.1em}.type-palace .type-work{text-align:center}.type-palace h3{font:normal clamp(34px,6.6vw,96px)/1.05 Baskerville,'Times New Roman',serif;letter-spacing:.12em}.type-palace h3 small{display:block;font-size:.25em;font-style:italic;letter-spacing:.01em;margin-bottom:17px}.type-palace p{font:italic 16px/1.6 Baskerville,serif}.type-palace:hover .type-work{transform:translateY(-5px)}.type-directory+.copyright{margin-top:0;padding:26px}
-@media(max-width:650px){.type-directory{padding-inline:6vw}.type-project{grid-template-columns:40px minmax(0,1fr) 18px;gap:12px;padding:36px 0 42px}.type-number{font-size:9px}.type-paradisus .type-work{padding-left:3%}.type-paradisus p{font-size:12px;letter-spacing:.07em}.type-softly h3{font-size:clamp(27px,6.7vw,43px)}.type-palace h3{font-size:clamp(28px,7vw,48px);letter-spacing:.05em}.type-arrow{font-size:19px}}
-@media(prefers-reduced-motion:reduce){.type-project *{transition:none!important;transform:none!important}}
-/* Editorial pacing: the title remains still while the small index marks respond. */
-.type-project{transition:border-color .5s ease}
-.type-project:hover{border-color:var(--ink)}
-.type-work h3{text-wrap:balance}
-.type-work p{max-width:48em}
-@media(hover:none){.type-project:hover .type-work,.type-project:hover .type-arrow{transform:none}}
-/* Project posters keep their complete original proportions. */
-.project-poster{width:min(100%,360px);margin:0 0 28px;overflow:hidden}
-.project-poster img{display:block;width:100%;height:auto;transition:transform 1s cubic-bezier(.2,.7,.2,1),opacity .6s}
-.type-project:hover .project-poster img{transform:scale(1.025)}
-.type-softly h3{font-size:clamp(30px,4vw,58px)}
-.type-paradisus .project-poster{width:min(100%,360px)}
-.type-palace .project-poster{margin-inline:auto}
-@media(prefers-reduced-motion:reduce){.project-poster img{transition:none!important;transform:none!important}}
+/* Exhibition index: complete posters and distinct typographic identities. */
+.art-index-page .art-directory{width:min(100%,1480px);margin:0 auto;padding:clamp(28px,4vw,64px) var(--space-gutter) 0}
+.art-index-heading{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:clamp(38px,5vw,72px)}
+.art-index-heading h2{font:400 clamp(38px,6.8vw,100px)/.98 var(--font-display);letter-spacing:-.04em;margin:0}
+.art-index-count{font:10px/1.5 var(--font-interface);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.type-project{display:grid;grid-template-columns:48px minmax(190px,.85fr) minmax(0,1.3fr) 28px;column-gap:clamp(24px,4vw,64px);align-items:center;padding:var(--space-section) 0;border-top:1px solid var(--rule-subtle);color:var(--ink);text-decoration:none;transition:border-color var(--duration-reveal) ease}
+.type-number{align-self:start;font:10px/1.5 var(--font-interface);letter-spacing:.06em;color:var(--muted);white-space:nowrap}
+.project-poster{position:relative;width:100%;max-width:342px;justify-self:start;margin:0;overflow:clip;background:var(--paper)}
+.project-poster img{display:block;width:100%;height:auto;transition:transform 1100ms var(--ease-gallery)}
+.type-work{min-width:0;transition:opacity var(--duration-reveal) ease}
+.type-work h3{font-weight:400;margin:0;text-wrap:balance}
+.type-work p{font:12px/1.65 var(--font-interface);color:var(--muted);margin:24px 0 0;max-width:34em}
+.type-arrow{align-self:end;justify-self:end;font:24px/1 var(--font-gallery);opacity:.5;transition:transform var(--duration-reveal) var(--ease-gallery),opacity var(--duration-detail) ease}
+.type-softly h3{font:400 clamp(38px,5vw,72px)/1.08 var(--font-display);letter-spacing:-.025em}
+.type-softly h3 span,.type-softly h3 em{display:block}
+.type-softly h3 em{font-family:var(--font-gallery);font-weight:400;margin-left:8%;line-height:1.2}
+.type-softly p{font:italic clamp(14px,1.35vw,19px)/1.5 var(--font-gallery);margin-left:8%}
+.type-paradisus{grid-template-columns:48px minmax(0,1.3fr) minmax(190px,.85fr) 28px}
+.type-paradisus .project-poster{grid-column:3;grid-row:1;justify-self:end}
+.type-paradisus .type-work{grid-column:2;grid-row:1;padding-left:5%}
+.type-paradisus .type-arrow{grid-column:4;grid-row:1}
+.type-paradisus h3{display:flex;gap:.28em;font:400 clamp(50px,6.3vw,88px)/1.4 'Songti SC','Noto Serif CJK SC',serif}
+.type-paradisus h3 span:nth-child(2){transform:translateY(.13em)}
+.type-paradisus p{font:15px/1.5 var(--font-gallery);letter-spacing:.14em;margin-top:34px}
+.type-untitled{grid-template-columns:48px minmax(0,1fr) 28px;padding-block:clamp(54px,7vw,100px)}
+.type-untitled h3{font:300 clamp(40px,7vw,98px)/1.1 var(--font-interface);letter-spacing:-.055em}
+.type-untitled h3 span{font:400 .62em/1 monospace;display:inline-block;vertical-align:.08em;color:var(--muted)}
+.type-untitled p{letter-spacing:.08em}
+.type-palace h3{font:400 clamp(40px,5.6vw,78px)/1.05 var(--font-gallery);letter-spacing:.12em}
+.type-palace h3 small{display:block;font-size:.32em;font-style:italic;letter-spacing:0;margin-bottom:18px}
+.type-palace p{font:italic 16px/1.5 var(--font-gallery)}
+.type-project:focus-visible{outline:1px solid var(--ink);outline-offset:8px}
+.type-project:active .type-arrow{opacity:1}
+.art-index-page>.copyright{margin-top:0;border-top:1px solid var(--rule-subtle);margin-inline:var(--space-gutter);padding-block:26px}
+@media(hover:hover){.type-project:hover{border-color:var(--ink)}.type-project:hover .project-poster img{transform:scale(1.018)}.type-project:hover .type-arrow{opacity:1;transform:translate(3px,-3px)}}
+@media(max-width:900px){.type-project{grid-template-columns:32px minmax(140px,.85fr) minmax(0,1.1fr) 18px;gap:24px}.type-paradisus{grid-template-columns:32px minmax(0,1.1fr) minmax(140px,.85fr) 18px}.type-softly h3{font-size:clamp(32px,5.3vw,48px)}.type-untitled{grid-template-columns:32px minmax(0,1fr) 18px}.type-palace h3{letter-spacing:.05em}.art-index-count{font-size:9px}}
+@media(max-width:600px){
+ .art-index-heading{display:block;margin-bottom:36px}.art-index-heading h2{font-size:clamp(36px,10vw,60px)}.art-index-count{display:block;margin-top:18px}
+ .type-project,.type-paradisus{grid-template-columns:24px minmax(0,1fr) 20px;gap:24px 14px;padding:36px 0 44px;align-items:start}
+ .type-number{grid-column:1;grid-row:1;font-size:9px;writing-mode:vertical-rl}
+ .project-poster,.type-paradisus .project-poster{grid-column:2;grid-row:1;width:100%;max-width:310px;justify-self:center}
+ .type-work,.type-paradisus .type-work{grid-column:2;grid-row:2;padding:0}
+ .type-arrow,.type-paradisus .type-arrow{grid-column:3;grid-row:2;align-self:end;font-size:20px}
+ .type-softly h3{font-size:clamp(29px,7.7vw,45px)}.type-softly p{font-size:14px;margin-top:14px}.type-softly h3 em,.type-softly p{margin-left:0}
+ .type-paradisus h3{font-size:clamp(44px,13vw,72px)}.type-paradisus p{font-size:12px;letter-spacing:.08em;margin-top:22px}
+ .type-untitled .type-work,.type-untitled .type-arrow{grid-row:1}.type-untitled h3{font-size:clamp(32px,8vw,50px)}.type-work p{margin-top:16px}.type-palace h3{font-size:clamp(32px,8vw,46px)}.type-palace h3 small{margin-bottom:12px}
+}
+@media(prefers-reduced-motion:reduce){.type-project *{transition:none!important}.type-project:hover .project-poster img,.type-project:hover .type-arrow{transform:none}}

@@ -16,3 +16,14 @@
 .selection-collage>.selection-balloon{animation:none;transform:none;will-change:auto}
 .selection-balloon .cut-letter{will-change:transform;transition:none}
 @media(prefers-reduced-motion:reduce){.selection-balloon .cut-letter{will-change:auto}}
+
+/* Shared heading rhythm; letter physics and individual collision paths stay in JS. */
+.library-heading,.music-title-row,.photo-title-row{column-gap:clamp(16px,1.5vw,24px);align-items:baseline;min-width:0}
+.library-heading h2,.music-title-row h2,.photo-index .photo-title-row h2{font-size:clamp(40px,7vw,110px);line-height:1.04;letter-spacing:-.035em;flex:0 1 auto}
+.library-heading>.selection-collage,.music-title-row>.selection-collage,.photo-title-row>.selection-collage{font-size:clamp(20px,3.5vw,55px);flex:0 0 auto}
+.selection-collage{overflow:visible;user-select:none}
+@media(max-width:600px){
+ .library-heading,.music-title-row,.photo-title-row{flex-wrap:nowrap;column-gap:16px}
+ .library-heading h2,.music-title-row h2,.photo-index .photo-title-row h2{font-size:clamp(38px,7vw,46px)}
+ .library-heading>.selection-collage,.music-title-row>.selection-collage,.photo-title-row>.selection-collage{font-size:clamp(19px,3.5vw,23px)}
+}
